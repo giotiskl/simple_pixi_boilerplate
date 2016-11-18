@@ -1,4 +1,6 @@
 var ProvidePlugin = require('webpack').ProvidePlugin;
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var Autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
@@ -12,6 +14,12 @@ module.exports = {
   },
   module: {
     loaders: [
+      // SASS loader
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader')
+      },
+      // JavaScript loader
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
@@ -25,6 +33,10 @@ module.exports = {
     ]
   },
   plugins: [
+    // extract compiled CSS
+    new ExtractTextPlugin('public/styles.css', {
+      allChunks: true,
+    }),
     new ProvidePlugin({
       // extracts jquery into the global namespace
       // under $/jQuery variable names
@@ -34,5 +46,11 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js'],
-  }
+  },
+  // postcss config, runs autoprefixer on compiled CSS
+  postcss: [
+    Autoprefixer({
+      browsers: ['last 2 versions'] 
+    })
+  ]
 }
