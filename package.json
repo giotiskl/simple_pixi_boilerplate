@@ -1,0 +1,27 @@
+{
+  "name": "pixijses6boilerplate",
+  "version": "1.0.0",
+  "description": "A simple PixiJS boilerplate, with Webpack set up with Babel and ES6 support",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giotiskl/simple_pixi_boilerplate.git"
+  },
+  "keywords": [
+    "pixijs",
+    "es6",
+    "boilerplate",
+    "webpack",
+    "simple"
+  ],
+  "author": "Yiotis Kaltsikis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giotiskl/simple_pixi_boilerplate/issues"
+  },
+  "homepage": "https://github.com/giotiskl/simple_pixi_boilerplate#readme"
+}
