@@ -40,6 +40,8 @@ module.exports = {
       allChunks: true,
     }),
     new ProvidePlugin({
+      // extracts pixi.js into the global namespace
+      PIXI: 'pixi.js',
       // extracts jquery into the global namespace
       // under $/jQuery variable names
       $: 'jquery',
