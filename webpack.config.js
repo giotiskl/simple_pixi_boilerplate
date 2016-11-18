@@ -4,9 +4,11 @@ var Autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
+    // import basic styles all over the application
+    './styles/app.scss',
     // set our app.js as the entry point
     // to the PixiJS application
-    './app',
+    './app/app',
   ],
   output: {
     path: __dirname,
