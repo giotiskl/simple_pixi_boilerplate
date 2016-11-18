@@ -3,8 +3,8 @@ This project sets up a simple (PixiJS)[http://www.pixijs.com/] boilerplate, with
 
 # Installation
 To set this project up and running simply clone this repo and then:
-1) run ````npm install```` in the directory you downloaded it to install all dependencies.
-2) run ````npm run start```` to launch the webpack dev server with hot reloading.
+* run ````npm install```` in the directory you downloaded it to install all dependencies.
+* run ````npm run start```` to launch the webpack dev server with hot reloading.
 
 # JavaScript
 This project uses Webpack and Babel to enable you to write ES6.
